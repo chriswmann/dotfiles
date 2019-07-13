@@ -56,11 +56,11 @@ noremap  <buffer> <silent> 0 g0
 nnoremap <CR> :noh<CR><CR>
 let mapleader = " "
 nnoremap <leader><Enter> :noh<CR><CR>
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap [ []<Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap { {}<Esc>i
+"inoremap [ []<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap " ""<Esc>i
 inoremap <html> <html></html><Esc>7h i
 inoremap <div> <div></div><Esc>6h i
 inoremap <p> <p></p><Esc>4h i
