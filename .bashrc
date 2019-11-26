@@ -144,6 +144,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-source /etc/profile.d/bash_completion.sh
-
-
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\e[1;5C": forward-word'
+bind '"\e[1;5D": backward-word'

@@ -60,11 +60,4 @@ echo -en "\e]PE93A1A1" #cyan
 echo -en "\e]PFFDF6E3" #white
 clear #for background artifacting
 
-
-
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-if [  $PS1 && -f $(brew --prefix)/etc/bash_completion ]; then
-   . $(brew --prefix)/etc/bash_completion
-fi
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+source ~/.bashrc
