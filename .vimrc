@@ -87,7 +87,7 @@ set smartcase
 set smarttab
 set statusline=%f\ %=col:\ %c\ 
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-set textwidth=200
+set textwidth=120
 set wildmenu
 set wildmode=longest:full,full
 set foldmethod=manual
@@ -105,3 +105,9 @@ packloadall
 silent! helptags ALL
 let &t_SI="\033[5 q" " start insert mode
 let &t_EI="\033[1 q" " end insert mode
+
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.c set noexpandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
