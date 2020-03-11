@@ -54,4 +54,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 source ~/.bashrc
-source ~/.myenv
+source ~/.bash_aliases
