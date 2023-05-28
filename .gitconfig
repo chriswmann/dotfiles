@@ -1,0 +1,5 @@
+[include]
+  # For username / creds / etc
+  path = ~/.gitconfig.local
+[merge]
+	conflictstyle = diff3
