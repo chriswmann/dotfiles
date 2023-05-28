@@ -4,5 +4,6 @@ for file in *; do
     fi
 done
 
-ln -sf nvim ~/.config/
-
+ln -sf "$PWD/nvim" ~/.config/nvim
+ln -sf "$PWD/nnvim/lua" ~/.config/nvim/lua
+ln -sf "$PWD/nnvim/lua/plugins" ~/.config/nvim/lua/plugins
