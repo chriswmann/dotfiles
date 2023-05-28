@@ -1,2 +1,6 @@
-require('options')
-require('keymaps')
+require("options")
+require("keymaps")
+require("bootstrap-lazy")
+require("lazy").setup("plugins")
+require("colourscheme")
+require('telescope').load_extension('fzf')
