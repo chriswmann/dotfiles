@@ -14,6 +14,7 @@ function M.config()
       enable = true,
       update_cwd = true,
     },
+    modifiable  = true,
     renderer = {
       icons = {
         glyphs = {
