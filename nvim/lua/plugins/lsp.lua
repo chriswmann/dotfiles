@@ -55,6 +55,14 @@ function M.config()
     Opts = {
       on_attach = on_attach,
       capabilities = capabilities,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' }
+          }
+        }
+      }
+
     }
 
     server = vim.split(server, "@")[1]
@@ -64,8 +72,7 @@ function M.config()
       Opts = vim.tbl_deep_extend("force", conf_opts, Opts)
     end
 
-    lspconfig[server].setup(Opts)
-  end
+    lspconfig[server].setup(Opts) end
 
   local signs = {
     { name = "DiagnosticSignError", text = "" },

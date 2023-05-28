@@ -1,4 +1,4 @@
-local M = M or {}
+local M = {}
 
 M = {'christoomey/vim-tmux-navigator'}
 
