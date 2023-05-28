@@ -21,6 +21,7 @@ function M.config()
     persist_size = true,
     direction = "float",
     close_on_exit = true,
+    autochdir = true,
     shell = vim.o.shell,
     float_opts = {
       border = "curved",
@@ -34,6 +35,8 @@ function M.config()
     vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
     vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
     vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
+    vim.api.nvim_buf_set_keymap(0, "t", "<ESC>", [[<C-\><C-n>]], opts)
+    vim.api.nvim_buf_set_keymap(0, "t", "<C-c>", [[<C-\><C-n>]], opts)
   end
 
   vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
