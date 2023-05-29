@@ -14,7 +14,7 @@ o.guifont = "monospace:h17"               -- the font used in graphical neovim a
 o.hlsearch = true                         -- highlight all matches on previous search pattern
 o.ignorecase = true                       -- ignore case in search patterns
 o.iskeyword:append "-"                    -- treats words with `-` as single words
-o.laststatus = 3                          -- only the last window will always have a status line
+o.laststatus = 2                          -- only the last window will always have a status line
 o.linebreak = true                        -- wrap lines at typographically-nicer characters (see h: breakat)
 o.mouse = "a"                             -- allow the mouse to be used in neovim
 o.number = true                           -- set numbered lines

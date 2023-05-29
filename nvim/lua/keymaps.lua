@@ -46,6 +46,9 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Terminal
+keymap("t", "<C-c>", "",  opts)
+
 -- Plugins --
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
@@ -75,7 +78,7 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle!<CR>", opts)
 
 -- toggleterm
-keymap({"n", "i", "v"}, "<leader>tt", ":ToggleTerm size=20 dir=~/Desktop direction=horizontal<CR>", opts)
+keymap({"n", "i", "v"}, "<leader>tt", ":ToggleTerm size=20 direction=horizontal<CR>", opts)
 
 -- leap
 keymap("n", "<leader>s", ":leap_s<CR>", opts )
@@ -89,3 +92,7 @@ keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
 keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
 keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+
+
+-- treesitter
+keymap("n", "[c", function() require("treesitter-context").go_to_context() end, opts)
