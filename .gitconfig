@@ -3,3 +3,5 @@
   path = ~/.gitconfig.local
 [merge]
 	conflictstyle = diff3
+[core]
+	editor = vim
