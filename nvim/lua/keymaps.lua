@@ -78,7 +78,7 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle!<CR>", opts)
 
 -- toggleterm
-keymap({"n", "i", "v"}, "<leader>tt", ":ToggleTerm size=20 direction=horizontal<CR>", opts)
+keymap({"n", "v"}, "<leader>tt", ":ToggleTerm size=20 direction=horizontal<CR>", opts)
 
 -- leap
 keymap("n", "<leader>s", ":leap_s<CR>", opts )
