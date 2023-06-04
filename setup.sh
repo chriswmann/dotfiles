@@ -1,12 +1,14 @@
-for file in *; do
-    if [[ -d $PASSED ]]; then
-        ln -sf ./"$file" ~/"$file"
-    fi
-done
-
+# All OSes
 ln -sf "$PWD/nvim" ~/.config/nvim
-# ln -sf "$PWD/nnvim/lua" ~/.config/nvim/lua
-# ln -sf "$PWD/nnvim/lua/plugins" ~/.config/nvim/lua/plugins
+ln -sf "$PWD/.aliases" ~/.aliases
 
-ln -sf "$PWD/tokyo_night.itermcolours" ~/.local/share/
+# OS specific
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    ln -sf ./.bashrc ~/bashrc
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    ln -sf "$PWD/tokyo_night.itermcolours" ~/.local/share/
+    ln -sf "$PWD/.zshrc" ~/zshrc
+    rustup completions zsh > ~/.zfunc/_rustup
+    rustup completions zsh cargo > ~/.zfunc/_cargo
+fi
 

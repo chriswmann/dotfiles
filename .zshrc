@@ -1,4 +1,4 @@
-# Add Homebrew's executable directory to the front of the PATH
+#~/.oh-my-zsh/custom/plugins Add Homebrew's executable directory to the front of the PATH
 export PATH=/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -67,6 +67,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source .aliases
 
 # User configuration
 export PATH="/usr/local/sbin:$PATH"
@@ -104,3 +105,8 @@ if [ -f '/Users/Aztec/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/
 if [ -f '/Users/Aztec/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Aztec/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
+fpath+=~/.zfunc
+
+autoload -Uz compinit bashcompinit
+compinit
+bashcompinit
