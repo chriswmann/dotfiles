@@ -2,3 +2,5 @@
 .gitconfig.local
  
 lazy-lock.json
+
+tmux/plugins/*
