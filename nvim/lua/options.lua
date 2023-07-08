@@ -3,6 +3,7 @@ local indent = 4
 o.backup = false                          -- creates a backup file
 o.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 o.cmdheight = 1                           -- more space in the neovim command line for displaying messages
+o.colorcolumn = "88"                      -- Set column ruler to match python black/ruff default
 o.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 o.conceallevel = 0                        -- so that `` is visible in markdown files
 o.cursorline = true                       -- highlight the current line
@@ -20,8 +21,8 @@ o.mouse = "a"                             -- allow the mouse to be used in neovi
 o.number = true                           -- set numbered lines
 o.numberwidth = 4                         -- minimal number of columns to use for the line number {default 4}
 o.pumheight = 10                          -- pop up menu height
-o.relativenumber = true
-o.ruler = false                           -- hide the line and column number of the cursor position
+o.relativenumber = true                   -- show current line number in margin
+o.ruler = true                            -- hide the line and column number of the cursor position
 o.scrolloff = 8                           -- minimal number of screen lines to keep above and below the cursor
 o.shiftwidth = indent                     -- the number of spaces inserted for each indentation
 o.shortmess:append "c"                    -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
@@ -38,7 +39,7 @@ o.swapfile = false                        -- creates a swapfile
 o.tabstop = indent                        -- insert {indent} spaces for a tab
 o.termguicolors = true                    -- set term gui colors (most terminals support this)
 o.timeout = true
-o.timeoutlen = 300                        -- time to wait for a mapped sequence to complete (in milliseconds)
+o.timeoutlen = 200                        -- time to wait for a mapped sequence to complete (in milliseconds)
 o.undofile = true                         -- enable persistent undo
 o.updatetime = 300                        -- faster completion (4000ms default)
 o.whichwrap:append "<,>,[,],h,l"          -- keys allowed to move to the previous/next line when the beginning/end of line is reached

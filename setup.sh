@@ -1,6 +1,9 @@
 # All OSes
+rm -rf ~/.config/nvim
 ln -sf "$PWD/nvim" ~/.config/nvim
 ln -sf "$PWD/.aliases" ~/.aliases
+rm -rf ~/.config/tmux
+ln -sf "$PWD/tmux" ~/.config/tmux
 
 # OS specific
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
