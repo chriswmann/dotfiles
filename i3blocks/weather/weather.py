@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 import datetime as dt
 import os
 import requests
 import sys
-
 
 def get_location():
     args = sys.argv[1:]
@@ -71,9 +71,6 @@ def main():
 
     api_key = os.environ.get("OPEN_WEATHER_API_KEY")
     
-    if not api_key:
-        api_key = "7ac2f6a4738b4af5a325eeb3b3995060"
-
     location = get_location()
     
     weather_data = get_weather_data(location, api_key)
