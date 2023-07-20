@@ -132,6 +132,7 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
+export SUDO_EDITOR=vim
 
 complete -C '/usr/bin/aws_completer' aws
 
@@ -144,5 +145,29 @@ source ~/.aliases
 # VIMRC=~/.config/.vimrc
 EDITOR=nvim
 
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # eval "$(pyenv init -)"
 source ~/credentials
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/chris/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chris/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/chris/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chris/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/chris/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/chris/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
