@@ -171,3 +171,4 @@ if [ -f "/home/chris/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+. "$HOME/.cargo/env"
