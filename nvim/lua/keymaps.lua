@@ -74,6 +74,11 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
+-- inc-rename
+keymap("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })
+
 -- Nvim-tree
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle!<CR>", opts)
 

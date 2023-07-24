@@ -67,7 +67,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source .aliases
+source ~/.aliases
 
 # User configuration
 export PATH="/usr/local/sbin:$PATH"
