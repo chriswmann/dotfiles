@@ -1,0 +1,118 @@
+// Place your key bindings in this file to overwrite the defaults
+{
+    "name": "Mac",
+    "editor.rulers": [88],
+    "includePath": ["/usr/local/include",
+        "/path/to/additional/includes",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include"
+    ],
+    "team.showWelcomeMessage": false,
+    "explorer.confirmDelete": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "code-runner.runInTerminal": true,
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "code-runner.enableAppInsights": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "cpp": "g++ -Wall -Weverything $fullFileName && ./a.out"
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.editor.enablePreview": false,
+    "python.testing.pytestEnabled": true,
+    "editor.suggestSelection": "first",
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": -1,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "cmake.configureOnOpen": true,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.fontFamily": "menlo for powerline",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "c-cpp-flylint.clang.pedantic": true,
+    "c-cpp-flylint.flexelint.executable": "cppcheck",
+    "security.workspace.trust.untrustedFiles": "open",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex -> biber -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "workbench.editor.wrapTabs": true,
+    "vim.vimrc.enable": true,
+    "ltex.additionalRules.motherTongue": "en-GB",
+    "ltex.language": "en-GB",
+    "security.workspace.trust.enabled": false,
+    "autoDocstring.docstringFormat": "numpy",
+    "redhat.telemetry.enabled": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.languageServer": "Pylance",
+    "cSpell.userWords": [
+        "csvsql",
+        "dtype",
+        "dtypes",
+        "fpath",
+        "fpaths",
+        "idata",
+        "MCMC",
+        "Metrolopis",
+        "Overstone",
+        "psql"
+    ],
+    "files.trimTrailingWhitespace": true,
+    "terminal.external.osxExec": "/Applications/iTerm.app",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.rightClickBehavior": "paste",
+    "cSpell.language": "en-GB",
+    "editor.inlineSuggest.enabled": true,
+    "[sql]": {
+        "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+    },
+    "clang-tidy.executable": "/usr/local/opt/llvm/bin/clang-tidy",
+    "clang-tidy.compilerArgs": [
+        "-std=c++20"
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.codeAction.showDocumentation": true,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+}
