@@ -133,6 +133,7 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 export SUDO_EDITOR=vim
+export QT_QPA_PLATFORMTHEME=qt6ct
 
 complete -C '/usr/bin/aws_completer' aws
 
