@@ -9,7 +9,7 @@ export OSH='/home/chris/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="font"
+OSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -134,6 +134,7 @@ fi
 
 export SUDO_EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt6ct
+export GTK_THEME='Adwaita-dark'
 
 complete -C '/usr/bin/aws_completer' aws
 
@@ -173,3 +174,7 @@ fi
 # <<< conda initialize <<<
 
 . "$HOME/.cargo/env"
+
+# Needed for zoom and zoom screen sharing
+XDG_CURRENT_DESKTOP=gnome
+QT_QPA_PLATFORM=xcb

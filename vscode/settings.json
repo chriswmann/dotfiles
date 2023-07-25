@@ -115,4 +115,8 @@
     "C_Cpp.codeAnalysis.clangTidy.enabled": false,
     "editor.formatOnPaste": true,
     "editor.formatOnType": true,
+    "workbench.colorTheme": "Tokyo Storm AltSynt",
+    "window.menuBarVisibility": "toggle",
+    "gtkTitleBar.mode": "dark",
+    "window.titleBarStyle": "custom",
 }
