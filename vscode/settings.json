@@ -119,4 +119,5 @@
     "window.menuBarVisibility": "toggle",
     "gtkTitleBar.mode": "dark",
     "window.titleBarStyle": "custom",
+    "notebook.outline.showCodeCells": true,
 }
