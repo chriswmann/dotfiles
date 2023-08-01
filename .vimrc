@@ -22,14 +22,6 @@ set colorcolumn=88
 highlight ColorColumn ctermbg=darkgray
 imap jj <Esc>
 imap <S-Tab> <C-X><C-F>
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
-noremap  <buffer> <silent> $ g$
-noremap  <buffer> <silent> 0 g0
-"oremap  <buffer> <silent> j gj
-"noremap  <buffer> <silent> k gk
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 let mapleader = " "
