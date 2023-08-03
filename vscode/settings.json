@@ -120,4 +120,5 @@
     "gtkTitleBar.mode": "dark",
     "window.titleBarStyle": "custom",
     "notebook.outline.showCodeCells": true,
+    "jupyter.askForKernelRestart": false,
 }
