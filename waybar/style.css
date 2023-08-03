@@ -1,8 +1,9 @@
 * {
+    padding-top: 2px;
     border: none;
     border-radius: 0;
     font-family: "Ubuntu Nerd Font";
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -39,7 +40,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 3px;
+    padding: 0 2px;
     margin: 0 2px;
 }
 
