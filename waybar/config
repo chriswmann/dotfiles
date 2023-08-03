@@ -126,9 +126,12 @@
     },
 
     "wlr/workspaces": {
-        "disable-scroll": true,
-        "disable-markup" : false,
+    	"disable-scroll": false,
+        "sort-by-number": true,
         "all-outputs": true,
+        "warp-on-scroll": true,
+        "on-click": "activate",
+        "disable-markup" : false,
         "format": "  {icon}  ",
         //"format":"{icon}",
         "format-icons": {
