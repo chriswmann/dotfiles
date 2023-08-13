@@ -9,9 +9,9 @@
 
     "modules-left": [
         // "custom/launcher",
-        "wlr/workspaces",
-        "custom/media",
-        "hyprland/window",
+        "wlr/workspaces"
+        // "custom/media",
+        // "hyprland/window",
     ],
  
     "modules-center": [
@@ -132,14 +132,14 @@
         "warp-on-scroll": true,
         "on-click": "activate",
         "disable-markup" : false,
-        "format": "  {icon}  ",
+        "format": "  {icon}  "
         //"format":"{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "󰙯",
-            "4": "",
-        }
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "󰙯",
+        //     "4": "",
+        // }
     },
 
     "pulseaudio": {
