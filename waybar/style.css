@@ -240,6 +240,7 @@ window#waybar {
 }
 
 #backlight.icon {
-    padding-right:1px;
+    padding-left:10px;
+    padding-right:10px;
     font-size: 13px;
 }

@@ -26,6 +26,7 @@
         // "custom/keyboard-layout",
         "battery",
         //"custom/PBPbattery",
+        "backlight",
         // "backlight#icon",
         // "backlight#value",
         "pulseaudio",
@@ -187,18 +188,13 @@
         "spacing":10,
      },
 
-    "backlight#icon": {
-        "format": "{icon}",
+    "backlight": {
+        "format": "{icon} {percent}%",
         "format-icons": [""],
-        "on-scroll-down": "brightnessctl -c backlight set 1%-",
-        "on-scroll-up": "brightnessctl -c backlight set +1%"
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%"
     },
 
-    "backlight#value" :{
-         "format": "{percent}%",
-         "on-scroll-down": "brightnessctl -c backlight set 1%-",
-         "on-scroll-up": "brightnessctl -c backlight set +1%"
-    },
 
     "custom/firefox": {
         "format": " ",
