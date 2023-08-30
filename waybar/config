@@ -106,7 +106,7 @@
         "format-ethernet": " ", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "kitty -e 'nmtui'",
+        "on-click": "nm-connection-editor",
     },
     "network#vpn": {
         "interface": "tun0",
