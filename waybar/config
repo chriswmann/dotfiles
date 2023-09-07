@@ -9,7 +9,8 @@
 
     "modules-left": [
         // "custom/launcher",
-        "wlr/workspaces"
+        "hyprland/workspaces"
+        // "wlr/workspaces"
         // "custom/media",
         // "hyprland/window",
     ],
