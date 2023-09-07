@@ -173,4 +173,7 @@
     "python.analysis.addImport.exactMatchOnly": true,
     "python.analysis.autoImportCompletions": true,
     "notebook.lineNumbers": "on",
+    "workbench.editorAssociations": {
+        "*.xls": "default"
+    },
 }
