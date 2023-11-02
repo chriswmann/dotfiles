@@ -1,10 +1,10 @@
-# some more ls aliases
-alias ...='cd ../../'                       # Go back 2 directory levels
+# some more eza aliases
+alias ...='cd ../../'                       # Go back 2 directory leveeza
 alias ..='cd ../'                           # Go back 1 directory level
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory leveeza
+alias .4='cd ../../../../'                  # Go back 4 directory leveeza
+alias .5='cd ../../../../../'               # Go back 5 directory leveeza
+alias .6='cd ../../../../../../'            # Go back 6 directory leveeza
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias c='clear'                             # c:            Clear terminal display
@@ -13,9 +13,9 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias l='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias l='eza -FlAh --color=auto'           # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
-alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+alias lr='eza -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias node='nodejs'
@@ -28,11 +28,10 @@ cd() { builtin cd "$@"; l; }               # Always list directory contents upon
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 
-# enable color support of ls and also add handy aliases
+# enable color support of eza and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias l='ls -FGlAhp --color=auto'
-    alias ls='ls --color=auto'
+    alias l='eza -FlAh --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -42,3 +41,4 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias vim='nvim'
+alias nv='neovide'

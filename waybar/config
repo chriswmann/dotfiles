@@ -108,7 +108,7 @@
         "format-ethernet": " ", // Icon: ethernet
         "format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "nm-connection-editor",
+        "on-click": "nm-applet",
     },
     "network#vpn": {
         "interface": "tun0",

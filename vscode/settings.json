@@ -176,4 +176,5 @@
     "workbench.editorAssociations": {
         "*.xls": "default"
     },
+    "git.confirmSync": false,
 }

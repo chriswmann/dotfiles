@@ -46,3 +46,4 @@ o.whichwrap:append "<,>,[,],h,l"          -- keys allowed to move to the previou
 o.wrap = false                            -- display lines as one long line
 o.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
+ vim.g.copilot_assume_mapped = true

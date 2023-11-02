@@ -178,3 +178,6 @@ fi
 # Needed for zoom and zoom screen sharing
 XDG_CURRENT_DESKTOP=gnome
 QT_QPA_PLATFORM=xcb
+
+export GIT_TRACE=1
+
