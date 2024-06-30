@@ -18,5 +18,13 @@
     {
         "key": "ctrl+shift+]",
         "command": "workbench.panel.repl.view.focus"
+    },
+    {
+        "key": "ctrl+[Backslash]",
+        "command": "github.copilot.toggleCopilot"
+    },
+    {
+        "key": "ctrl+d r",
+        "command": "workbench.action.debug.callStackTop"
     }
 ]
