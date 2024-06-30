@@ -1,7 +1,7 @@
 # Enable the subsequent settings only in interactive sessions
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # Path to your oh-my-bash installation.
@@ -11,61 +11,12 @@ export OSH='/home/chris/.oh-my-bash'
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="pete"
 
-# Uncomment the following line to use case-sensitive completion.
-# OMB_CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# OMB_HYPHEN_SENSITIVE="false"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_OSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.  One of the following values can
-# be used to specify the timestamp format.
-# * 'mm/dd/yyyy'     # mm/dd/yyyy + time
-# * 'dd.mm.yyyy'     # dd.mm.yyyy + time
-# * 'yyyy-mm-dd'     # yyyy-mm-dd + time
-# * '[mm/dd/yyyy]'   # [mm/dd/yyyy] + [time] with colors
-# * '[dd.mm.yyyy]'   # [dd.mm.yyyy] + [time] with colors
-# * '[yyyy-mm-dd]'   # [yyyy-mm-dd] + [time] with colors
-# If not set, the default value is 'yyyy-mm-dd'.
-# HIST_STAMPS='yyyy-mm-dd'
-
-# Uncomment the following line if you do not want OMB to overwrite the existing
-# aliases by the default OMB aliases defined in lib/*.sh
-# OMB_DEFAULT_ALIASES="check"
-
-# Would you like to use another custom folder than $OSH/custom?
-# OSH_CUSTOM=/path/to/new-custom-folder
-
 # To disable the uses of "sudo" by oh-my-bash, please set "false" to
 # this variable.  The default behavior for the empty value is "true".
 OMB_USE_SUDO=true
 
 # To enable/disable display of Python virtualenv and condaenv
-# OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+OMB_PROMPT_SHOW_PYTHON_VENV=true # enable
 # OMB_PROMPT_SHOW_PYTHON_VENV=false # disable
 
 # Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
@@ -73,9 +24,9 @@ OMB_USE_SUDO=true
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
-  composer
-  ssh
+	git
+	composer
+	ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -83,7 +34,7 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-  general
+	general
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -91,8 +42,8 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bashmarks
+	git
+	bashmarks
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -112,9 +63,9 @@ source "$OSH"/oh-my-bash.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+	export EDITOR='vim'
 else
-  export EDITOR='mvim'
+	export EDITOR='mvim'
 fi
 
 # Compilation flags
@@ -138,38 +89,35 @@ export GTK_THEME='Adwaita-dark'
 
 complete -C '/usr/bin/aws_completer' aws
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 
 source ~/.aliases
 
 # VIMRC=~/.config/.vimrc
 EDITOR=nvim
 
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+	PATH="$HOME/.local/bin:$PATH"
 fi
 
-# eval "$(pyenv init -)"
 source ~/credentials
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/chris/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/chris/mambaforge/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+	eval "$__conda_setup"
 else
-    if [ -f "/home/chris/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/chris/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/chris/mambaforge/bin:$PATH"
-    fi
+	if [ -f "/home/chris/mambaforge/etc/profile.d/conda.sh" ]; then
+		. "/home/chris/mambaforge/etc/profile.d/conda.sh"
+	else
+		export PATH="/home/chris/mambaforge/bin:$PATH"
+	fi
 fi
 unset __conda_setup
 
 if [ -f "/home/chris/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/chris/mambaforge/etc/profile.d/mamba.sh"
+	. "/home/chris/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
@@ -179,5 +127,34 @@ fi
 XDG_CURRENT_DESKTOP=gnome
 QT_QPA_PLATFORM=xcb
 
-export GIT_TRACE=1
+shopt cdspell
+shopt -s autocd
 
+export QT_STYLE_OVERRIDE=adwaita
+export PATH=~/.npm-global/bin:/usr/local/texlive/2023/bin/x86_64-linux:/usr/local/aws-cli/v2/2.15.40/bin/aws:$PATH
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+export DAGSTER_HOME=~/dagster
+export PYRIGHT_PYTHON_FORCE_VERSION=latest
+
+function frg {
+	result=$(rg --ignore-case --color=always --line-number --no-heading "$@" |
+		fzf --ansi \
+			--color 'hl:-1:underline,hl+:-1:underline:reverse' \
+			--delimiter ':' \
+			--preview "bat --color=always {1} --theme='Solarized (light)' --highlight-line {2}" \
+			--preview-window 'up,60%,border-bottom,+{2}+3/3,~3')
+	file="${result%%:*}"
+	linenumber=$(echo "${result}" | cut -d: -f2)
+	if [ ! -z "$file" ]; then
+		$EDITOR +"${linenumber}" "$file"
+	fi
+}
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(ssh-agent)"
+eval "$(direnv hook bash)"
+source /usr/share/nvm/init-nvm.sh
+source ~/shell_completions/just.bash
