@@ -13,12 +13,11 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias l='eza -FlAh --color=auto'           # Preferred 'ls' implementation
+alias l='eza -F -lAhm --color=auto'           # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 alias lr='eza -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
-alias node='nodejs'
 alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
 alias redshift='psql "host=$REDSHIFT_HOST user=$REDSHIFT_USER dbname=$REDSHIFT_DB port=$REDSHIFT_PORT password=$REDSHIFT_PASSWORD"'
 alias show_options='shopt'                  # Show_options: display bash options settings
@@ -31,7 +30,7 @@ cd() { builtin cd "$@"; l; }               # Always list directory contents upon
 # enable color support of eza and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias l='eza -FlAh --color=auto'
+    alias l='eza -F -lAh --color=auto'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -42,3 +41,7 @@ fi
 
 alias vim='nvim'
 alias nv='neovide'
+alias rstudio='QT_STYLE_OVERRIDE=Adwaita-dark /usr/lib/rstudio/rstudio'
+alias lvim='NVIM_APPNAME=lazyvim nvim'
+
+alias connect_mouse='bluetoothctl connect EC:67:50:09:E4:0F'
