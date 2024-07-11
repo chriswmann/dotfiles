@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      "ctrl-]": ["workspace::SendKeystrokes", "ctrl-`"]
+    }
+  }
+]
