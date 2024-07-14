@@ -153,8 +153,7 @@ function frg {
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 eval "$(ssh-agent)"
-eval "$(direnv hook bash)"
 source /usr/share/nvm/init-nvm.sh
 source ~/shell_completions/just.bash
+. "$HOME/.rye/env"
