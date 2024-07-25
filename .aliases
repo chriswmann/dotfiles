@@ -42,6 +42,5 @@ fi
 alias vim='nvim'
 alias nv='neovide'
 alias rstudio='QT_STYLE_OVERRIDE=Adwaita-dark /usr/lib/rstudio/rstudio'
-alias lvim='NVIM_APPNAME=lazyvim nvim'
 
 alias connect_mouse='bluetoothctl connect EC:67:50:09:E4:0F'
