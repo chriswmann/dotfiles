@@ -1,6 +1,0 @@
-.DS_Store
-.gitconfig.local
- 
-lazy-lock.json
-
-tmux/plugins/*
