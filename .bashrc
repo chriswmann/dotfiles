@@ -129,7 +129,7 @@ shopt cdspell
 shopt -s autocd
 
 export QT_STYLE_OVERRIDE=adwaita
-export PATH=~/.npm-global/bin:/usr/local/texlive/2023/bin/x86_64-linux:/usr/local/aws-cli/v2/2.15.40/bin/aws:$PATH
+export PATH=~/.npm-global/bin:/usr/local/texlive/2023/bin/x86_64-linux:/usr/local/aws-cli/v2/2.15.40/bin/aws:/home/chris/.cargo/bin:$PATH
 export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 export DAGSTER_HOME=~/dagster
