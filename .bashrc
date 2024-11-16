@@ -27,6 +27,8 @@ completions=(
   git
   composer
   ssh
+  pip3
+  docker-compose
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -65,7 +67,7 @@ source "$OSH"/oh-my-bash.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -151,11 +153,17 @@ function frg {
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(ssh-agent)"
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval "$(ssh-agent)"
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l >/dev/null || ssh-add
+
 source ~/shell_completions/just.bash
-complete -C '/usr/local/bin/aws_completer' aws
 . "$HOME/.rye/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+. ~/.private_aliases
