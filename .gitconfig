@@ -1,7 +1,64 @@
-[include]
-  # For username / creds / etc
-  path = ~/.gitconfig.local
-[merge]
-	conflictstyle = diff3
+[user]
+	email = 8133496+chriswmann@users.noreply.github.com
+	name = Chris
 [core]
+  #pager = less -iXFR
+  pager = delta
+
 	editor = vim
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[init]
+	defaultBranch = main
+[alias]
+	lg = log --graph -10 --format='%C(yellow)%h%Creset  %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[rerere]
+	enabled = true
+  autoupdate = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential]
+	helper = cache --timeout=86400
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+  conflictstyle = zdiff3
+[tag]
+  sort = version:refname
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+
+# why the hell not?
+
+[help]
+  autocorrect = prompt
+[commit]
+  verbose = true
+[core]
+  excludesfile = ~/.gitignore
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true

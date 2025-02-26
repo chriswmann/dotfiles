@@ -89,7 +89,7 @@ export SUDO_EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt6ct
 export GTK_THEME='Adwaita-dark'
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 source ~/.aliases
 
@@ -165,7 +165,8 @@ source ~/shell_completions/just.bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-. ~/.work_env
+. /home/chris/.work_env
 eval "$(zoxide init bash)"
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 source <(carapace _carapace)
+eval "$(atuin init bash)"
